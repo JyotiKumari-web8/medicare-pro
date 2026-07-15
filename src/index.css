@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  /* Default Theme Colors - Injected dynamically from hospitalConfig.js in App.jsx */
+  --color-primary: #0ea5e9;
+  --color-secondary: #0f172a;
+  --color-accent: #e11d48;
+  --color-bg-gradient-start: #f0f9ff;
+  --color-bg-gradient-end: #ffffff;
+}
+
+@theme {
+  /* Set fonts */
+  --font-sans: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+
+  /* Custom Color Theme Links */
+  --color-primary: var(--color-primary);
+  --color-primary-hover: color-mix(in srgb, var(--color-primary) 85%, black);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Glassmorphism utility classes */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-dark-card {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Animations and Transitions */
+.glow-primary {
+  box-shadow: 0 0 20px -3px var(--color-primary);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Modal Lock */
+.no-scroll {
+  overflow: hidden;
+}
